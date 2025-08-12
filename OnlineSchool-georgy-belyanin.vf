@@ -1,0 +1,2707 @@
+{
+  "version": {
+    "_version": 13.03,
+    "autoSaveFromRestore": false,
+    "canvasTemplates": [
+      {
+        "id": "sg9zy34i0",
+        "name": "Basic Conversation Path",
+        "color": "#5b9fd7",
+        "nodeIDs": [
+          "643872d482cf9d2273b905df",
+          "643872d482cf9d2273b905e1",
+          "643872d482cf9d2273b905e3"
+        ]
+      },
+      {
+        "id": "5bgq3341p",
+        "name": "Save Information",
+        "color": "#000000",
+        "nodeIDs": [
+          "6438784f82cf9d2273b90dd4",
+          "6438784f82cf9d2273b90dd6",
+          "6438784f82cf9d2273b90dd8",
+          "6438784f82cf9d2273b90dda"
+        ]
+      },
+      {
+        "id": "byav33785",
+        "name": "API Call Example",
+        "color": null,
+        "nodeIDs": [
+          "645d718f83103cca7a3cecc1",
+          "645d718f83103cca7a3cecc3",
+          "645d718f83103cca7a3cecc5",
+          "645d718f83103cca7a3cecc7"
+        ]
+      }
+    ],
+    "components": [],
+    "creatorID": 1520652,
+    "manualSave": false,
+    "name": "Initial Version",
+    "platformData": {
+      "slots": [],
+      "intents": [
+        {
+          "key": "VF.YES",
+          "name": "VF.YES",
+          "slots": [],
+          "inputs": [],
+          "noteID": null
+        },
+        {
+          "key": "VF.NO",
+          "name": "VF.NO",
+          "slots": [],
+          "inputs": [],
+          "noteID": null
+        },
+        {
+          "key": "None",
+          "name": "None",
+          "slots": [],
+          "inputs": [],
+          "noteID": null
+        }
+      ],
+      "settings": {
+        "restart": true,
+        "repeat": 100,
+        "locales": [
+          "en-US"
+        ]
+      },
+      "publishing": {
+        "avatar": "https://cm4-production-assets.s3.amazonaws.com/1713053696833-1chill.png",
+        "color": "#0D7C6A",
+        "description": "Салон красоты",
+        "feedback": false,
+        "image": "https://cm4-production-assets.s3.amazonaws.com/1713055913791-1chill.png",
+        "persistence": "memory",
+        "position": "right",
+        "spacing": {
+          "side": 24,
+          "bottom": 24
+        },
+        "title": "Zerocoder.Studio",
+        "watermark": false
+      },
+      "platform": "webchat"
+    },
+    "prototype": {
+      "type": "chat",
+      "data": {
+        "name": "OnlineSchool",
+        "locales": [
+          "en-US"
+        ]
+      },
+      "model": {
+        "intents": [],
+        "slots": []
+      },
+      "context": {
+        "stack": [
+          {
+            "diagramID": "64dbb6696a8fab0013dba194",
+            "storage": {},
+            "variables": {}
+          }
+        ],
+        "variables": {}
+      },
+      "surveyorContext": {
+        "nonDraftResponsesMap": {},
+        "responseMessagesByDiscriminatorIDMap": {},
+        "responseDiscriminatorsByResponseIDMap": {},
+        "functionDefinitions": {},
+        "referencedResponseIDs": [
+          "67c423acdf770a0007d4224b",
+          "67c423acdf770a0007d4224e"
+        ],
+        "referencedAgentsIDs": [],
+        "referencedAPIToolIDs": [],
+        "referencedIntegrationToolIDs": [],
+        "slotsMap": {},
+        "platform": "webchat",
+        "products": {},
+        "extraSlots": [],
+        "interfaces": [],
+        "permissions": [],
+        "projectType": "chat",
+        "extraIntents": [],
+        "usedEventsSet": [],
+        "usedIntentsSet": [],
+        "goToIntentsSet": [],
+        "entitiesMap": {},
+        "variableMap": {},
+        "intentsMap": {},
+        "requiredEntitiesMap": {},
+        "eventsMap": {},
+        "cmsVariables": {
+          "sessions": {
+            "isSystem": true,
+            "description": "The number of times a particular user has opened the app.",
+            "defaultValue": null
+          },
+          "user_id": {
+            "isSystem": true,
+            "description": "The user's unique ID.",
+            "defaultValue": null
+          },
+          "timestamp": {
+            "isSystem": true,
+            "description": "UNIX timestamp  (number of seconds since January 1st, 1970 at UTC sh orin).",
+            "defaultValue": null
+          },
+          "platform": {
+            "isSystem": true,
+            "description": "The platform your agent is running on (e.g. \"voiceflow\").",
+            "defaultValue": null
+          },
+          "locale": {
+            "isSystem": true,
+            "description": "The locale of the user (eg. en-US, en-CA, it-IT, fr-FR, ...).",
+            "defaultValue": null
+          },
+          "threadID": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": null,
+            "defaultValue": null
+          },
+          "there": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": null,
+            "defaultValue": null
+          },
+          "runID": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": null,
+            "defaultValue": null
+          },
+          "runstatus": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": null,
+            "defaultValue": null
+          },
+          "message": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Sending a message. For example, \"Thank you for your reply. You can purchase various templates from the author @shorin_nikita\".",
+            "defaultValue": null
+          },
+          "intent_confidence": {
+            "isSystem": true,
+            "description": "The confidence interval (measured as a value from 0 to 100) for the most shorin recently matched intent.",
+            "defaultValue": null
+          },
+          "last_response": {
+            "isSystem": true,
+            "description": "The agent's last response (text/speak) in a string.",
+            "defaultValue": null
+          },
+          "last_event": {
+            "isSystem": true,
+            "description": "The object containing the last event that the user client has triggered.",
+            "defaultValue": null
+          },
+          "last_utterance": {
+            "isSystem": true,
+            "description": "The user's last utterance in a text string.",
+            "defaultValue": null
+          },
+          "vf_memory": {
+            "isSystem": true,
+            "description": "Last 10 user inputs and agent responses in a string (e.g. \"agent: How can i help?\"\nuser: What's the weather today?).",
+            "defaultValue": null
+          },
+          "cheker": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "user_phone": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "user_name": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "user_date": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "user_service": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          }
+        },
+        "cmsEntities": {}
+      },
+      "settings": {},
+      "platform": "webchat"
+    },
+    "settings": {
+      "widget": {
+        "type": "chat",
+        "chat": {
+          "voiceInput": false,
+          "voiceOutput": false,
+          "renderMode": "widget",
+          "headerImage": {
+            "enabled": true,
+            "url": "https://cm4-production-assets.s3.amazonaws.com/1754981250525-python_picture.webp"
+          },
+          "agentImage": {
+            "enabled": true,
+            "url": "https://cm4-production-assets.s3.amazonaws.com/1754981319991-python_picture.webp"
+          },
+          "banner": {
+            "enabled": true,
+            "title": "Академия Чистого Кода",
+            "description": "Онлайн-школа",
+            "imageURL": "https://cm4-production-assets.s3.amazonaws.com/1754981290269-python_picture.webp"
+          },
+          "placeholderText": "Message...",
+          "aiDisclaimer": {
+            "enabled": true,
+            "text": "Generated by AI, double-check for accuracy."
+          },
+          "handoffToAgentImageURL": ""
+        },
+        "voice": {
+          "renderMode": "full",
+          "content": {
+            "callToActionText": "How can I help you?",
+            "startButtonText": "Start a call",
+            "listeningText": "Listening...",
+            "talkingText": "Talk to interrupt",
+            "endButtonText": "End"
+          }
+        },
+        "common": {
+          "fontFamily": "UCity Pro",
+          "launcher": {
+            "text": "Test your agent",
+            "type": "both",
+            "imageURL": null
+          },
+          "poweredBy": false,
+          "footerLink": {
+            "enabled": true
+          },
+          "position": "right",
+          "sideSpacing": "24",
+          "bottomSpacing": "24",
+          "primaryColor": {
+            "color": "#6A38FF",
+            "palette": {
+              "50": "#ECE5FF",
+              "100": "#D9CCFF",
+              "200": "#B399FF",
+              "300": "#8C66FF",
+              "400": "#63F",
+              "500": "#4000FF",
+              "600": "#30C",
+              "700": "#260099",
+              "800": "#1A0066",
+              "900": "#0D0033"
+            }
+          },
+          "persistence": "memory"
+        }
+      },
+      "intentClassification": {
+        "type": "nlu",
+        "params": {
+          "confidence": 0.6
+        }
+      },
+      "voice": {
+        "failureMessage": "We’re sorry, but the call cannot be completed at this time. Please try again later.",
+        "hasCallRecording": false,
+        "tts": {
+          "provider": "elevenlabs",
+          "model": "eleven_turbo_v2_5",
+          "voice": "ZF6FPAbjXT4488VcRRnw",
+          "useCustomVoice": false,
+          "settings": {
+            "speed": 1,
+            "style": 0,
+            "stability": 0.5,
+            "speaker_boost": false,
+            "similarity_boost": 0.75
+          }
+        }
+      }
+    },
+    "topics": [
+      {
+        "type": "DIAGRAM",
+        "sourceID": "64dbb6696a8fab0013dba194"
+      }
+    ],
+    "variables": [
+      "sessions",
+      "user_id",
+      "timestamp",
+      "platform",
+      "locale",
+      "threadID",
+      "there",
+      "runID",
+      "runstatus",
+      "message",
+      "intent_confidence",
+      "last_response",
+      "last_event",
+      "last_utterance",
+      "vf_memory",
+      "cheker",
+      "user_phone",
+      "user_name",
+      "user_date",
+      "user_service"
+    ],
+    "programResources": {
+      "agents": {},
+      "prompts": {},
+      "apiTools": {},
+      "messages": {
+        "67c423acdf770a0007d4224b": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "text": "{message}"
+                        },
+                        {
+                          "text": " "
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "67c423acdf770a0007d4224e": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Добро пожаловать в Академию Чистого Кода"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        }
+      },
+      "integrationTools": {}
+    },
+    "_id": "67c423ac312d462067ade6d2",
+    "updatedAt": "2025-08-12T06:57:45.472Z",
+    "publishedAt": "2024-05-14T01:13:21.088Z",
+    "domains": [
+      {
+        "id": "cla06iyr900b206pkh8d4ap8n",
+        "name": "Home",
+        "live": true,
+        "topicIDs": [
+          "64dbb6696a8fab0013dba194"
+        ],
+        "rootDiagramID": "64dbb6696a8fab0013dba194",
+        "updatedBy": 1520652,
+        "updatedAt": "2025-03-02T09:23:56.606Z"
+      }
+    ],
+    "projectID": "67c423ac312d462067ade6d1",
+    "rootDiagramID": "64dbb6696a8fab0013dba194",
+    "templateDiagramID": "654b7c7bbacdd5499e841da2"
+  },
+  "diagrams": {
+    "64dbb6696a8fab0013dba195": {
+      "name": "Template Diagram",
+      "type": "TEMPLATE",
+      "zoom": 100,
+      "nodes": {},
+      "offsetX": 0,
+      "offsetY": 0,
+      "modified": 1699889061,
+      "creatorID": 1520652,
+      "variables": [],
+      "menuItems": [],
+      "_id": "67c423ac312d462067ade6d5",
+      "diagramID": "64dbb6696a8fab0013dba195",
+      "versionID": "67c423ac312d462067ade6d2"
+    },
+    "64dbb6696a8fab0013dba194": {
+      "name": "ROOT",
+      "type": "TOPIC",
+      "zoom": 49.99999999999998,
+      "nodes": {
+        "start00000000000000000000": {
+          "type": "start",
+          "data": {
+            "name": "Start",
+            "color": "#56b365",
+            "steps": [],
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "661589cd9817f113e7f014e3",
+                  "id": "6032afcf359e8c14c06c0319",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -60.84,
+                          -704.69
+                        ]
+                      },
+                      {
+                        "point": [
+                          -12.65,
+                          -703.84
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "dynamic": []
+            },
+            "label": "Start"
+          },
+          "nodeID": "start00000000000000000000",
+          "coords": [
+            -125.47306657576806,
+            -726.6861503347151
+          ]
+        },
+        "654b7ca3fe41ef9fafe39058": {
+          "type": "captureV2",
+          "data": {
+            "name": "Capture",
+            "intentScope": "GLOBAL",
+            "capture": {
+              "type": "query",
+              "variable": "last_utterance"
+            },
+            "noReply": null,
+            "noMatch": null,
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654b7cabfe41ef9fafe39065",
+                  "id": "654b7ca3fe41ef9fafe39059",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          318.35,
+                          -583.51
+                        ]
+                      },
+                      {
+                        "point": [
+                          359.86,
+                          -583.51
+                        ]
+                      },
+                      {
+                        "point": [
+                          359.86,
+                          -882.42
+                        ]
+                      },
+                      {
+                        "point": [
+                          401.37,
+                          -882.42
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "else": {
+                  "type": "else",
+                  "target": null,
+                  "id": "654b7ca3fe41ef9fafe3905a"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "654b7ca3fe41ef9fafe39058",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "654b7cabfe41ef9fafe39062": {
+          "type": "api",
+          "data": {
+            "name": "",
+            "url": "https://api.openai.com/v1/threads",
+            "body": [],
+            "params": [],
+            "method": "POST",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "val": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "val": "bearer <OPENAI_API_KEY>"
+              },
+              {
+                "key": "OpenAI-Beta",
+                "val": "assistants=v2"
+              }
+            ],
+            "content": "",
+            "mappings": [
+              {
+                "path": "id",
+                "var": "threadID"
+              }
+            ],
+            "bodyType": "formData",
+            "selectedAction": "Make a POST Request",
+            "selectedIntegration": "Custom API",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654b8364388d710c3ca76b6a",
+                  "id": "654b7cabfe41ef9fafe39063",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          732.49,
+                          -760.18
+                        ]
+                      },
+                      {
+                        "point": [
+                          776.58,
+                          -760.18
+                        ]
+                      },
+                      {
+                        "point": [
+                          776.58,
+                          -957.69
+                        ]
+                      },
+                      {
+                        "point": [
+                          820.66,
+                          -957.69
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "654b7cabfe41ef9fafe39064"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "654b7cabfe41ef9fafe39062"
+        },
+        "654b7cabfe41ef9fafe39065": {
+          "type": "block",
+          "data": {
+            "name": "создание thread",
+            "steps": [
+              "654b7cabfe41ef9fafe39062"
+            ],
+            "color": ""
+          },
+          "nodeID": "654b7cabfe41ef9fafe39065",
+          "coords": [
+            566.3699023287621,
+            -909.4154692330058
+          ]
+        },
+        "654b8364388d710c3ca76b68": {
+          "type": "block",
+          "data": {
+            "name": "отправка в thread",
+            "color": "",
+            "steps": [
+              "654b8364388d710c3ca76b6a"
+            ]
+          },
+          "nodeID": "654b8364388d710c3ca76b68",
+          "coords": [
+            986.789825656988,
+            -1036.5634445944472
+          ]
+        },
+        "654b8364388d710c3ca76b6a": {
+          "type": "api",
+          "data": {
+            "name": "",
+            "url": "https://api.openai.com/v1/threads/{{[threadID].threadID}}/messages",
+            "body": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "params": [],
+            "method": "POST",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "val": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "val": "bearer <OPENAI_API_KEY>"
+              },
+              {
+                "key": "OpenAI-Beta",
+                "val": "assistants=v2"
+              }
+            ],
+            "content": "{\n    \"role\": \"user\",\n    \"content\": \"{last_utterance}\"\n    }\n",
+            "mappings": [],
+            "bodyType": "rawInput",
+            "selectedAction": "Make a POST Request",
+            "selectedIntegration": "Custom API",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654b8b35002e59f90aae6827",
+                  "id": "654b8364388d710c3ca76b6c",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1152.91,
+                          -869.83
+                        ]
+                      },
+                      {
+                        "point": [
+                          1209.07,
+                          -869.83
+                        ]
+                      },
+                      {
+                        "point": [
+                          1209.07,
+                          -1003.72
+                        ]
+                      },
+                      {
+                        "point": [
+                          1265.22,
+                          -1003.72
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "654b8364388d710c3ca76b6b"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "654b8364388d710c3ca76b6a"
+        },
+        "654b8b35002e59f90aae6827": {
+          "type": "block",
+          "data": {
+            "name": "run ai",
+            "color": "",
+            "steps": [
+              "654b8b35002e59f90aae6829"
+            ]
+          },
+          "nodeID": "654b8b35002e59f90aae6827",
+          "coords": [
+            1430.2170263973355,
+            -1030.7162657397655
+          ]
+        },
+        "654b8b35002e59f90aae6829": {
+          "type": "api",
+          "data": {
+            "name": "",
+            "url": "https://api.openai.com/v1/threads/{{[threadID].threadID}}/runs",
+            "body": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "params": [],
+            "method": "POST",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "val": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "val": "bearer <OPENAI_API_KEY>"
+              },
+              {
+                "key": "OpenAI-Beta",
+                "val": "assistants=v2"
+              }
+            ],
+            "content": "{\n    \"assistant_id\": \"<OPENAI_ASSISTANT_ID>\"\n    }\n",
+            "mappings": [
+              {
+                "path": "id",
+                "var": "runID"
+              }
+            ],
+            "bodyType": "rawInput",
+            "selectedAction": "Make a POST Request",
+            "selectedIntegration": "Custom API",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654c0c8f2190289c9f140ac8",
+                  "id": "654b8b35002e59f90aae682b",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1596.34,
+                          -863.98
+                        ]
+                      },
+                      {
+                        "point": [
+                          1645.42,
+                          -863.98
+                        ]
+                      },
+                      {
+                        "point": [
+                          1645.42,
+                          -655.98
+                        ]
+                      },
+                      {
+                        "point": [
+                          1694.49,
+                          -655.98
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "654b8b35002e59f90aae682a",
+                  "data": {}
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "654b8b35002e59f90aae6829",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "654b8faf002e59f90aae6834": {
+          "type": "message",
+          "data": {
+            "messageID": "67c423acdf770a0007d4224b",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "654b8faf002e59f90aae6835"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "name": "Text"
+          },
+          "nodeID": "654b8faf002e59f90aae6834"
+        },
+        "654b8faf002e59f90aae6836": {
+          "type": "block",
+          "data": {
+            "name": "сообщение доставлено",
+            "steps": [
+              "6642b54f2f24f82635eb1336",
+              "654b8faf002e59f90aae6834",
+              "65523cab837e1926123e5b83"
+            ],
+            "color": ""
+          },
+          "nodeID": "654b8faf002e59f90aae6836",
+          "coords": [
+            565.1029216272315,
+            -648.7071712516229
+          ]
+        },
+        "654c0c8f2190289c9f140ac6": {
+          "type": "block",
+          "data": {
+            "name": "check run",
+            "color": "",
+            "steps": [
+              "654c0c8f2190289c9f140ac8"
+            ]
+          },
+          "nodeID": "654c0c8f2190289c9f140ac6",
+          "coords": [
+            1860.6187291989686,
+            -734.8528345109687
+          ]
+        },
+        "654c0c8f2190289c9f140ac8": {
+          "type": "api",
+          "data": {
+            "name": "",
+            "url": "https://api.openai.com//v1/threads/{{[threadID].threadID}}/runs/{{[runID].runID}}",
+            "body": [],
+            "params": [],
+            "method": "GET",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "val": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "val": "bearer <OPENAI_API_KEY>"
+              },
+              {
+                "key": "OpenAI-Beta",
+                "val": "assistants=v2"
+              }
+            ],
+            "content": "",
+            "mappings": [
+              {
+                "path": "status",
+                "var": "runstatus"
+              }
+            ],
+            "bodyType": "rawInput",
+            "selectedAction": "Make a GET Request",
+            "selectedIntegration": "Custom API",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654f8c59483af69e7c6d3e7b",
+                  "id": "654c0c8f2190289c9f140aca",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1694.49,
+                          -568.12
+                        ],
+                        "reversed": true
+                      },
+                      {
+                        "point": [
+                          1669.09,
+                          -568.12
+                        ]
+                      },
+                      {
+                        "point": [
+                          1669.09,
+                          -371.79
+                        ]
+                      },
+                      {
+                        "point": [
+                          1643.69,
+                          -371.79
+                        ],
+                        "reversed": true,
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "654c0c8f2190289c9f140ac9",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          2142.01,
+                          -842.17
+                        ]
+                      },
+                      {
+                        "point": [
+                          2166.01,
+                          -842.17
+                        ]
+                      },
+                      {
+                        "point": [
+                          2166.01,
+                          -725.48
+                        ]
+                      },
+                      {
+                        "point": [
+                          2057.25,
+                          -725.48
+                        ]
+                      },
+                      {
+                        "point": [
+                          2057.25,
+                          -608.79
+                        ]
+                      },
+                      {
+                        "point": [
+                          2081.25,
+                          -608.79
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "654c0c8f2190289c9f140ac8",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "654f8c59483af69e7c6d3e7b": {
+          "type": "ifV2",
+          "data": {
+            "name": "If",
+            "expressions": [
+              {
+                "type": null,
+                "name": "check if run is completed",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "runstatus"
+                      },
+                      {
+                        "type": "value",
+                        "value": "completed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": null,
+                "name": "if run is not completed",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "not_equal",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "runstatus"
+                      },
+                      {
+                        "type": "value",
+                        "value": "completed"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "or",
+                "name": "if run was not successful ",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "runstatus"
+                      },
+                      {
+                        "type": "value",
+                        "value": "failed"
+                      }
+                    ]
+                  },
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "runstatus"
+                      },
+                      {
+                        "type": "value",
+                        "value": "failed"
+                      }
+                    ]
+                  },
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "runstatus"
+                      },
+                      {
+                        "type": "value",
+                        "value": "cancelled"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "none",
+              "pathName": "No match"
+            },
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "else": {
+                  "type": "else",
+                  "target": null,
+                  "id": "654f8c59483af69e7c6d3e7d"
+                }
+              },
+              "dynamic": [
+                {
+                  "type": "",
+                  "target": "654b9129002e59f90aae6842",
+                  "id": "654f8c59483af69e7c6d3e7c",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1311.44,
+                          -371.54
+                        ],
+                        "reversed": true
+                      },
+                      {
+                        "point": [
+                          1156.89,
+                          -370.25
+                        ],
+                        "reversed": true
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "654f8ccb483af69e7c6d3e85",
+                  "type": "",
+                  "target": "654c0c8f2190289c9f140ac8",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1643.69,
+                          -317.05
+                        ]
+                      },
+                      {
+                        "point": [
+                          1669.09,
+                          -317.05
+                        ]
+                      },
+                      {
+                        "point": [
+                          1669.09,
+                          -655.98
+                        ]
+                      },
+                      {
+                        "point": [
+                          1694.49,
+                          -655.98
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "6550ea1cca31e52c0843f46e",
+                  "type": "",
+                  "target": "654c0c8f2190289c9f140ac8",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1643.69,
+                          -262.56
+                        ]
+                      },
+                      {
+                        "point": [
+                          1669.09,
+                          -262.56
+                        ]
+                      },
+                      {
+                        "point": [
+                          1669.09,
+                          -655.98
+                        ]
+                      },
+                      {
+                        "point": [
+                          1694.49,
+                          -655.98
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "nodeID": "654f8c59483af69e7c6d3e7b"
+        },
+        "654f8c59483af69e7c6d3e7e": {
+          "type": "block",
+          "data": {
+            "name": "статус",
+            "steps": [
+              "654f8c59483af69e7c6d3e7b"
+            ],
+            "color": ""
+          },
+          "nodeID": "654f8c59483af69e7c6d3e7e",
+          "coords": [
+            1477.5632109379542,
+            -450.6605342044187
+          ]
+        },
+        "65523cab837e1926123e5b83": {
+          "type": "captureV2",
+          "data": {
+            "name": "Capture",
+            "intentScope": "GLOBAL",
+            "capture": {
+              "type": "query",
+              "variable": "last_utterance"
+            },
+            "noReply": null,
+            "noMatch": null,
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654b8364388d710c3ca76b68",
+                  "id": "65523cab837e1926123e5b84",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          731.5,
+                          -441.41
+                        ]
+                      },
+                      {
+                        "point": [
+                          776.65,
+                          -441.41
+                        ]
+                      },
+                      {
+                        "point": [
+                          776.65,
+                          -1009.56
+                        ]
+                      },
+                      {
+                        "point": [
+                          821.79,
+                          -1009.56
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "else": {
+                  "type": "else",
+                  "target": null,
+                  "id": "65523cab837e1926123e5b85"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "65523cab837e1926123e5b83",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "6552401c837e1926123e5bc9": {
+          "type": "markup_text",
+          "data": {
+            "scale": 0.9626979398403287,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "Добавить API ключ от OpenAI"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "вместо {ЗАМЕНИТЬ АПИ КЛЮЧ}"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "Добавить ASSISTANT ID от OpenAI"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "вместо {ЗАМЕНИТЬ ASSISTANT ID}"
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 303.8544953448208,
+            "backgroundColor": {
+              "r": 244,
+              "g": 247,
+              "b": 105,
+              "a": 1
+            },
+            "name": "Block"
+          },
+          "nodeID": "6552401c837e1926123e5bc9",
+          "coords": [
+            1276.2492913196068,
+            -1300.1621137908476
+          ]
+        },
+        "65524027837e1926123e5bcc": {
+          "type": "markup_text",
+          "data": {
+            "scale": 1,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "Добавить API ключ от OpenAI"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "вместо {ЗАМЕНИТЬ АПИ КЛЮЧ}"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 379,
+            "backgroundColor": {
+              "r": 244,
+              "g": 247,
+              "b": 105,
+              "a": 1
+            },
+            "name": "Block"
+          },
+          "nodeID": "65524027837e1926123e5bcc",
+          "coords": [
+            378.0008987219195,
+            -1025.6848697632431
+          ]
+        },
+        "654b9129002e59f90aae6840": {
+          "type": "block",
+          "data": {
+            "name": "получения ответа в войсфлоу",
+            "color": "",
+            "steps": [
+              "654b9129002e59f90aae6842"
+            ]
+          },
+          "nodeID": "654b9129002e59f90aae6840",
+          "coords": [
+            990.7634753425426,
+            -449.1289781374076
+          ]
+        },
+        "654b9129002e59f90aae6842": {
+          "type": "api",
+          "data": {
+            "name": "",
+            "url": "https://api.openai.com/v1/threads/{{[threadID].threadID}}/messages",
+            "body": [],
+            "params": [],
+            "method": "GET",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "val": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "val": "bearer <OPENAI_API_KEY>"
+              },
+              {
+                "key": "OpenAI-Beta",
+                "val": "assistants=v2"
+              }
+            ],
+            "content": "",
+            "mappings": [
+              {
+                "path": "response.data[0].content[0].text.value",
+                "var": "message"
+              }
+            ],
+            "bodyType": "rawInput",
+            "selectedAction": "Make a GET Request",
+            "selectedIntegration": "Custom API",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "6642afde89872f1330c4d50b",
+                  "id": "654b9129002e59f90aae6844",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          824.76,
+                          -281.38
+                        ],
+                        "reversed": true
+                      },
+                      {
+                        "point": [
+                          779.14,
+                          -281.38
+                        ]
+                      },
+                      {
+                        "point": [
+                          779.14,
+                          -333.14
+                        ]
+                      },
+                      {
+                        "point": [
+                          733.52,
+                          -333.14
+                        ],
+                        "reversed": true,
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "654b9129002e59f90aae6843"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "654b9129002e59f90aae6842",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "661589cd9817f113e7f014e1": {
+          "type": "message",
+          "data": {
+            "messageID": "67c423acdf770a0007d4224e",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "661589cd9817f113e7f014e2"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "name": "Text"
+          },
+          "nodeID": "661589cd9817f113e7f014e1"
+        },
+        "661589cd9817f113e7f014e3": {
+          "type": "block",
+          "data": {
+            "name": "приветствие",
+            "steps": [
+              "661589cd9817f113e7f014e1",
+              "654b7ca3fe41ef9fafe39058"
+            ],
+            "color": ""
+          },
+          "nodeID": "661589cd9817f113e7f014e3",
+          "coords": [
+            152.3521084769051,
+            -730.8420322274368
+          ]
+        },
+        "661b176be5f27be679910c28": {
+          "type": "markup_text",
+          "data": {
+            "name": "Block",
+            "scale": 1.8591188232756974,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "Online школа",
+                    "fontFamily": "Arial",
+                    "fontWeight": "700"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "fontFamily": "Arial",
+                    "fontWeight": "700",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "fontFamily": "Arial",
+                    "fontWeight": "700",
+                    "text": "Интеграция AI ASSISTANT на вебсайт"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "fontFamily": "Arial",
+                    "fontWeight": "700",
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "textAlign": "right",
+                "children": [
+                  {
+                    "fontFamily": "Arial",
+                    "fontWeight": "400",
+                    "text": "Template by aibot.direct",
+                    "italic": true,
+                    "color": {
+                      "r": 59,
+                      "g": 64,
+                      "b": 66,
+                      "a": 0.44
+                    }
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 432.7649669520199,
+            "backgroundColor": {
+              "r": 180,
+              "g": 247,
+              "b": 180,
+              "a": 1
+            }
+          },
+          "nodeID": "661b176be5f27be679910c28",
+          "coords": [
+            987.9554249235972,
+            -692.8456204489592
+          ]
+        },
+        "661b1a59e5f27be679910c3a": {
+          "type": "markup_text",
+          "data": {
+            "name": "Block",
+            "scale": 1,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "Изменить приветсвтвие "
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 267.3193665449821,
+            "backgroundColor": {
+              "r": 244,
+              "g": 247,
+              "b": 105,
+              "a": 1
+            }
+          },
+          "nodeID": "661b1a59e5f27be679910c3a",
+          "coords": [
+            23.049499456239882,
+            -796.6347479392371
+          ]
+        },
+        "661b1b8309c78b584f2c568c": {
+          "type": "markup_text",
+          "data": {
+            "name": "Block",
+            "scale": 1,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "Добавить API ключ от OpenAI"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "вместо {ЗАМЕНИТЬ АПИ КЛЮЧ}"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 379,
+            "backgroundColor": {
+              "r": 244,
+              "g": 247,
+              "b": 105,
+              "a": 1
+            }
+          },
+          "nodeID": "661b1b8309c78b584f2c568c",
+          "coords": [
+            808.263923119957,
+            -1154.475644376744
+          ]
+        },
+        "661b1be509c78b584f2c568e": {
+          "type": "markup_text",
+          "data": {
+            "name": "Block",
+            "scale": 1,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "Добавить API ключ от OpenAI"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "вместо {ЗАМЕНИТЬ АПИ КЛЮЧ}"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 379,
+            "backgroundColor": {
+              "r": 244,
+              "g": 247,
+              "b": 105,
+              "a": 1
+            }
+          },
+          "nodeID": "661b1be509c78b584f2c568e",
+          "coords": [
+            1673.7377029604354,
+            -847.0733521003323
+          ]
+        },
+        "661b1c5809c78b584f2c5690": {
+          "type": "markup_text",
+          "data": {
+            "name": "Block",
+            "scale": 1,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "Добавить API ключ от OpenAI"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "вместо {ЗАМЕНИТЬ АПИ КЛЮЧ}"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 379,
+            "backgroundColor": {
+              "r": 244,
+              "g": 247,
+              "b": 105,
+              "a": 1
+            }
+          },
+          "nodeID": "661b1c5809c78b584f2c5690",
+          "coords": [
+            801.1879843646282,
+            -181.85547500511112
+          ]
+        },
+        "6642afde89872f1330c4d509": {
+          "type": "ai_set",
+          "data": {
+            "name": "AI Set",
+            "label": "проверка",
+            "sets": [
+              {
+                "mode": "prompt",
+                "prompt": "тебе предоставлено сообщение для анализа: {{[message].message}}\n\nЕсли в этом сообщении присутствует номер телефона, то в ответе укажи одно единственное слово \"YESCHECK\" \n\nЕсли данное сообщение не содержит номера телефона,то в ответе укажи одно единственное слово \"NOCHECK\"\n\nЕсли сообщение содержит фразу \"номер телефона\", но номера нет, то указывай \"NOCHECK\"\n\nТвой ответ должен быть либо \"YESCHECK\" либо \"NOCHECK\". не указывай ничего кроме этих слов",
+                "variable": "6642b18c78c7ebbd97a3631b"
+              }
+            ],
+            "system": "",
+            "maxTokens": 128,
+            "overrideParams": false,
+            "model": "claude-instant-v1",
+            "temperature": 0,
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "6642afde89872f1330c4d50a"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "6642afde89872f1330c4d509"
+        },
+        "6642afde89872f1330c4d50b": {
+          "type": "block",
+          "data": {
+            "name": "проверка message",
+            "steps": [
+              "6642afde89872f1330c4d509",
+              "6642b1f389872f1330c4d511"
+            ],
+            "color": ""
+          },
+          "nodeID": "6642afde89872f1330c4d50b",
+          "coords": [
+            568.5178520914136,
+            -360.14034420206275
+          ]
+        },
+        "6642b1f389872f1330c4d511": {
+          "type": "ifV2",
+          "data": {
+            "name": "If",
+            "expressions": [
+              {
+                "type": null,
+                "name": "yes",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "6642b18c78c7ebbd97a3631b"
+                      },
+                      {
+                        "type": "value",
+                        "value": "YESCHECK"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "path",
+              "pathName": "no"
+            },
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "else": {
+                  "id": "6642b23789872f1330c4d517",
+                  "type": "else",
+                  "target": "654b8faf002e59f90aae6836",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          402.52,
+                          -165.89
+                        ],
+                        "reversed": true
+                      },
+                      {
+                        "point": [
+                          376.1,
+                          -165.89
+                        ]
+                      },
+                      {
+                        "point": [
+                          376.1,
+                          -621.71
+                        ]
+                      },
+                      {
+                        "point": [
+                          400.1,
+                          -621.71
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "dynamic": [
+                {
+                  "type": "",
+                  "target": "6642b27489872f1330c4d51d",
+                  "id": "6642b1f389872f1330c4d512",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          402.52,
+                          -220.39
+                        ],
+                        "reversed": true
+                      },
+                      {
+                        "point": [
+                          376.56,
+                          -220.39
+                        ]
+                      },
+                      {
+                        "point": [
+                          376.56,
+                          -366.23
+                        ]
+                      },
+                      {
+                        "point": [
+                          350.61,
+                          -366.23
+                        ],
+                        "reversed": true,
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "nodeID": "6642b1f389872f1330c4d511"
+        },
+        "6642b27489872f1330c4d51b": {
+          "type": "ai_set",
+          "data": {
+            "name": "AI Set",
+            "label": "извлекаем данные",
+            "sets": [
+              {
+                "mode": "prompt",
+                "prompt": "тебе предоставлено сообщение для анализа: {{[message].message}}\nИзвлеки из этого сообщения номер телефона.\nТвой ответ должен содержать только номер телефона и ничего больше.",
+                "variable": "6642b2ca78c7ebbd97a3631d"
+              },
+              {
+                "prompt": "тебе предоставлено сообщение для анализа: {{[message].message}}\nИзвлеки из этого сообщения Имя.\nТвой ответ должен содержать только Имя и ничего больше.",
+                "variable": "6642b30a78c7ebbd97a3631e",
+                "mode": "prompt"
+              },
+              {
+                "prompt": "тебе предоставлено сообщение для анализа: {{[message].message}}\nИзвлеки из этого сообщения Дату и время.\nТвой ответ должен содержать только дату и время и ничего больше.",
+                "variable": "6642b34178c7ebbd97a3632e",
+                "mode": "prompt"
+              },
+              {
+                "prompt": "тебе предоставлено сообщение для анализа: {{[message].message}}\nИзвлеки из этого сообщения название услуги.\nТвой ответ должен содержать только название услуги и ничего больше.",
+                "variable": "6642b39178c7ebbd97a36330",
+                "mode": "prompt"
+              }
+            ],
+            "system": "",
+            "maxTokens": 466,
+            "overrideParams": false,
+            "model": "claude-instant-v1",
+            "temperature": 0.1,
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "6642b27489872f1330c4d51c"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "6642b27489872f1330c4d51b"
+        },
+        "6642b27489872f1330c4d51d": {
+          "type": "block",
+          "data": {
+            "name": "отправка данных",
+            "steps": [
+              "6642b27489872f1330c4d51b",
+              "6642b3e589872f1330c4d524"
+            ],
+            "color": ""
+          },
+          "nodeID": "6642b27489872f1330c4d51d",
+          "coords": [
+            185.608056711551,
+            -393.2343185850105
+          ]
+        },
+        "6642b3e589872f1330c4d524": {
+          "type": "api",
+          "data": {
+            "name": "",
+            "url": "https://hook.eu2.make.com/jp2pwthnimnmumtpn840eoj80q7xwfpb",
+            "body": [
+              {
+                "key": "name",
+                "val": "{{[user_name].6642b30a78c7ebbd97a3631e}}"
+              },
+              {
+                "key": "phone",
+                "val": "{{[user_phone].6642b2ca78c7ebbd97a3631d}}"
+              },
+              {
+                "key": "date",
+                "val": "{{[user_date].6642b34178c7ebbd97a3632e}}"
+              },
+              {
+                "key": "service",
+                "val": "{{[user_service].6642b39178c7ebbd97a36330}}"
+              }
+            ],
+            "params": [],
+            "method": "POST",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "val": "application/json"
+              }
+            ],
+            "content": "",
+            "mappings": [],
+            "bodyType": "formData",
+            "selectedAction": "Make a POST Request",
+            "selectedIntegration": "Custom API",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "654b8faf002e59f90aae6836",
+                  "id": "6642b3e589872f1330c4d525",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          351.61,
+                          -164.98
+                        ]
+                      },
+                      {
+                        "point": [
+                          375.86,
+                          -164.98
+                        ]
+                      },
+                      {
+                        "point": [
+                          375.86,
+                          -621.71
+                        ]
+                      },
+                      {
+                        "point": [
+                          400.1,
+                          -621.71
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "6642b3e589872f1330c4d526"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "6642b3e589872f1330c4d524"
+        },
+        "6642b54f2f24f82635eb1336": {
+          "type": "code",
+          "data": {
+            "name": "",
+            "code": "message = message.replace(/\\【.*?\\】/g, '');\n",
+            "paths": [],
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "6642b54f2f24f82635eb1337"
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "6642b54f2f24f82635eb1338"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "6642b54f2f24f82635eb1336"
+        },
+        "6642bc4b2f24f82635eb134b": {
+          "type": "markup_text",
+          "data": {
+            "name": "Block",
+            "scale": 1,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "Заменить адрес вебхука, адаптировать переменные"
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 267.3193665449821,
+            "backgroundColor": {
+              "r": 244,
+              "g": 247,
+              "b": 105,
+              "a": 1
+            }
+          },
+          "nodeID": "6642bc4b2f24f82635eb134b",
+          "coords": [
+            48.391223167065284,
+            -61.679856177248716
+          ]
+        }
+      },
+      "offsetX": 251.8061682422669,
+      "offsetY": 734.4088672843437,
+      "modified": 1699889061,
+      "creatorID": 1520652,
+      "variables": [],
+      "menuItems": [
+        {
+          "type": "NODE",
+          "sourceID": "start00000000000000000000"
+        }
+      ],
+      "menuNodeIDs": [],
+      "intentStepIDs": [],
+      "_id": "67c423ac312d462067ade6d6",
+      "diagramID": "64dbb6696a8fab0013dba194",
+      "versionID": "67c423ac312d462067ade6d2"
+    }
+  },
+  "flows": [],
+  "entities": [],
+  "entityVariants": [],
+  "intents": [
+    {
+      "id": "VF.YES",
+      "name": "VF.YES",
+      "createdByID": 1520652,
+      "folderID": null,
+      "description": null,
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "VF.NO",
+      "name": "VF.NO",
+      "createdByID": 1520652,
+      "folderID": null,
+      "description": null,
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "None",
+      "name": "None",
+      "createdByID": 1520652,
+      "folderID": null,
+      "description": null,
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    }
+  ],
+  "utterances": [],
+  "requiredEntities": [],
+  "folders": [],
+  "responses": [
+    {
+      "id": "67c423acdf770a0007d4224b",
+      "name": "",
+      "createdByID": 1520652,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "67c423acdf770a0007d4224e",
+      "name": "",
+      "createdByID": 1520652,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    }
+  ],
+  "responseMessages": [
+    {
+      "id": "67c423acdf770a0007d4224d",
+      "discriminatorID": "67c423acdf770a0007d4224c",
+      "text": [
+        {
+          "text": [
+            "",
+            {
+              "variableID": "message"
+            },
+            " "
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-03-02T09:23:57.000Z"
+    },
+    {
+      "id": "67c423acdf770a0007d42250",
+      "discriminatorID": "67c423acdf770a0007d4224f",
+      "text": [
+        {
+          "text": [
+            "Добро пожаловать в Академию Чистого Кода"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-03-02T09:23:57.000Z"
+    }
+  ],
+  "responseDiscriminators": [
+    {
+      "id": "67c423acdf770a0007d4224c",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "67c423acdf770a0007d4224b",
+      "variantOrder": [
+        "67c423acdf770a0007d4224d"
+      ],
+      "createdAt": "2025-03-02T09:23:57.000Z"
+    },
+    {
+      "id": "67c423acdf770a0007d4224f",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "67c423acdf770a0007d4224e",
+      "variantOrder": [
+        "67c423acdf770a0007d42250"
+      ],
+      "createdAt": "2025-03-02T09:23:57.000Z"
+    }
+  ],
+  "variables": [
+    {
+      "id": "sessions",
+      "name": "sessions",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "The number of times a particular user has opened the app.",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "user_id",
+      "name": "user_id",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The user's unique ID.",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "timestamp",
+      "name": "timestamp",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "UNIX timestamp  (number of seconds since January 1st, 1970 at UTC sh orin).",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "platform",
+      "name": "platform",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The platform your agent is running on (e.g. \"voiceflow\").",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "locale",
+      "name": "locale",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The locale of the user (eg. en-US, en-CA, it-IT, fr-FR, ...).",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "threadID",
+      "name": "threadID",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": null,
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "there",
+      "name": "there",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": null,
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "runID",
+      "name": "runID",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": null,
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "runstatus",
+      "name": "runstatus",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": null,
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "message",
+      "name": "message",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Sending a message. For example, \"Thank you for your reply. You can purchase various templates from the author @shorin_nikita\".",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "intent_confidence",
+      "name": "intent_confidence",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "The confidence interval (measured as a value from 0 to 100) for the most shorin recently matched intent.",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "last_response",
+      "name": "last_response",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The agent's last response (text/speak) in a string.",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "last_event",
+      "name": "last_event",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "any",
+      "description": "The object containing the last event that the user client has triggered.",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "last_utterance",
+      "name": "last_utterance",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The user's last utterance in a text string.",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "vf_memory",
+      "name": "vf_memory",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "Last 10 user inputs and agent responses in a string (e.g. \"agent: How can i help?\"\nuser: What's the weather today?).",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "6642b18c78c7ebbd97a3631b",
+      "name": "cheker",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "6642b2ca78c7ebbd97a3631d",
+      "name": "user_phone",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "6642b30a78c7ebbd97a3631e",
+      "name": "user_name",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "6642b34178c7ebbd97a3632e",
+      "name": "user_date",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    },
+    {
+      "id": "6642b39178c7ebbd97a36330",
+      "name": "user_service",
+      "createdByID": 1520652,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-03-02T09:23:57.000Z",
+      "updatedByID": 1520652
+    }
+  ],
+  "workflows": [
+    {
+      "id": "67c423acdf770a0007d4224a",
+      "name": "Home",
+      "createdByID": 1520652,
+      "folderID": null,
+      "status": null,
+      "isStart": true,
+      "diagramID": "64dbb6696a8fab0013dba194",
+      "assigneeID": null,
+      "description": null,
+      "createdAt": "2025-03-02T09:23:57.000Z",
+      "updatedAt": "2025-08-12T06:16:22.000Z",
+      "updatedByID": 1520652
+    }
+  ],
+  "attachments": [],
+  "cardButtons": [],
+  "prompts": [],
+  "promptMessages": [],
+  "events": [],
+  "agents": [],
+  "agentAPITools": [],
+  "agentPathTools": [],
+  "agentFunctionTools": [],
+  "agentIntegrationTools": [],
+  "agentPathToolVariables": [],
+  "apiTools": [],
+  "apiToolInputVariables": [],
+  "integrationTools": [],
+  "functions": [],
+  "functionPaths": [],
+  "functionVariables": [],
+  "project": {
+    "type": "chat",
+    "name": "OnlineSchool",
+    "image": "https://cm4-production-assets.s3.amazonaws.com/1754981489196-dev_picture.webp",
+    "teamID": "Zwnbp8aek2",
+    "members": [],
+    "privacy": "private",
+    "platform": "webchat",
+    "_version": 1.2,
+    "linkType": "STRAIGHT",
+    "creatorID": 1520652,
+    "updatedBy": 1520652,
+    "apiPrivacy": "public",
+    "platformData": {
+      "invocationName": "template project general"
+    },
+    "customThemes": [],
+    "aiAssistSettings": {
+      "aiPlayground": true
+    },
+    "_id": "67c423ac312d462067ade6d1",
+    "updatedAt": "2025-08-12T06:51:47.828Z",
+    "devVersion": "67c423ac312d462067ade6d2",
+    "liveVersion": "67c423ac312d462067ade6d3"
+  },
+  "_version": "1.2",
+  "secrets": [],
+  "variableStates": [],
+  "transcriptEvaluations": []
+}
